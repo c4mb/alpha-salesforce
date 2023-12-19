@@ -1,33 +1,65 @@
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
-<!--  If necessary, please modify the charset parameter to specify the        -->
-<!--  character set of your HTML page.                                        -->
-<!--  ----------------------------------------------------------------------  -->
-<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: Please add the following <FORM> element to your page.             -->
-<!--  ----------------------------------------------------------------------  -->
-<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D1e0000000S56"
-    method="POST"><input type="hidden" name="oid" value="00D1e0000000S56"> <input type="hidden" name="retURL" value="https://www.alphasport.com.au/thank-you">
-    <!--  ----------------------------------------------------------------------  -->
-    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-    <!--  these lines if you wish to test in debug mode.                          -->
-    <!--  <input type="hidden" name="debug" value=1>                              -->
-    <!--  <input type="hidden" name="debugEmail"                                  -->
-    <!--  value="tabish.iqbal@viseo.com">                                         -->
-    <!--  ----------------------------------------------------------------------  -->
-    <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text"><br><label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" size="20" type="text"><br><label for="email">Email</label><input id="email" maxlength="80" name="email" size="20" type="text"><br><label for="phone">Phone</label><input id="phone" maxlength="40" name="phone" size="20" type="text"><br>Who is the enquiry for?:<select id="00N1e00000jiXHc" name="00N1e00000jiXHc" title="Who is the enquiry for?">
-<option value="">--None--</option>
-<option value="Self">Self</option>
-<option value="A Business, Club, or Organisation">A Business, Club, or Organisation</option>
-</select><br><label for="company">Company</label><input id="company" maxlength="40" name="company" size="20" type="text"><br>Enquiry relating to:<select id="00N1e00000jO4Xq" name="00N1e00000jO4Xq" title="Enquiry relating to">
-<option value="">--None--</option>
-<option value="Existing Order">Existing Order</option>
-<option value="Product Information">Product Information</option>
-<option value="Product Return">Product Return</option>
-<option value="Other">Other</option>
-</select><br><input type="hidden" id="lead_source" name="lead_source" value="Website Upgrade Form">
-    <br><label for="description">Description</label><textarea name="description"></textarea><br><input type="hidden" id="recordType" name="recordType" value="0121e000001IKON">
-    <br><input type="submit" name="submit">
-</form>
-
+<div class="content-box primary">
+    <header class="box-title cv-ico-general-mail ico-heading">Contact Us To Upgrade Your Account</header>
+    <section class="box-content">
+        
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+        <!--  If necessary, please modify the charset parameter to specify the        -->
+        <!--  character set of your HTML page.                                        -->
+        <!--  ----------------------------------------------------------------------  -->
+        <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: Please add the following <FORM> element to your page.             -->
+        <!--  ----------------------------------------------------------------------  -->
+        <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D1e0000000S56"
+            method="POST"><input type="hidden" name="oid" value="00D1e0000000S56"> <input type="hidden" name="retURL" value="https://www.alphasport.com.au/thank-you">
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail"                                  -->
+            <!--  value="tabish.iqbal@viseo.com">                                         -->
+            <!--  ----------------------------------------------------------------------  -->
+            <label class="form-label" for="first_name">First Name</label>
+            <input class="form-text" id="first_name" maxlength="40" name="first_name" size="20" type="text">
+            <br>
+            <label class="form-label required" for="last_name">Last Name</label>
+            <input class="form-text" id="last_name" maxlength="80" name="last_name" size="20" type="text" required/>
+            <br>
+            <label class="form-label required" for="email">Email</label>
+            <input class="form-email" id="email" maxlength="80" name="email" size="20" type="email" required/>
+            <br>
+            <label class="form-label" for="phone">Phone</label>
+            <input class="form-tel" id="phone" maxlength="40" name="phone" size="20" type="tel">
+            <br>
+            <label class="form-label" for="00N1e00000jiXHc">Who is the enquiry for?</label>
+            <select class="form-select cv-dropdown" id="00N1e00000jiXHc" name="00N1e00000jiXHc" title="Who is the enquiry for?">
+                <option value="">--None--</option>
+                <option value="Self">Self</option>
+                <option value="A Business, Club, or Organisation">A Business, Club, or Organisation</option>
+            </select>
+            <br>
+            <label class="form-label" for="company">Company</label>
+            <input class="form-text" id="company" maxlength="40" name="company" size="20" type="text">
+            <br>
+            <label class="form-label" for="00N1e00000jO4Xq">Enquiry relating to:</label>
+            <select class="form-select cv-dropdown" id="00N1e00000jO4Xq" name="00N1e00000jO4Xq" title="Enquiry relating to">
+                <option value="">--None--</option>
+                <option value="Existing Order">Existing Order</option>
+                <option value="Product Information">Product Information</option>
+                <option value="Product Return">Product Return</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+            <input type="hidden" id="lead_source" name="lead_source" value="Website Upgrade Form">
+            <br>
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-textarea" name="description"></textarea>
+            <br>
+            <input type="hidden" id="recordType" name="recordType" value="0121e000001IKON">
+            <br>
+            <button type="submit" class="btn cv-send" name="submit">Submit</button>
+        </form>
+    
+    </section>
+</div>
