@@ -8,11 +8,17 @@
         <!--  character set of your HTML page.                                        -->
         <!--  ----------------------------------------------------------------------  -->
         <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+        </script>
         <!--  ----------------------------------------------------------------------  -->
         <!--  NOTE: Please add the following <FORM> element to your page.             -->
         <!--  ----------------------------------------------------------------------  -->
-        <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D1e0000008m6x"
-            method="POST"><input type="hidden" name="oid" value="00D1e0000008m6x"> <input type="hidden" name="retURL" value="https://www.alphafirstaid.com.au/thank-you">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00D5j00000DC8K7" method="POST">
+            <input type="hidden" name='captcha_settings' value='{"keyname":"AlphaRecaptcha","fallback":"true","orgId":"00D5j00000DC8K7","ts":""}'>
+            <input type="hidden" name="oid" value="00D5j00000DC8K7">
+            <input type="hidden" name="retURL" value="https://www.alphafirstaid.com.au/thank-you">
             <!--  ----------------------------------------------------------------------  -->
             <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
             <!--  these lines if you wish to test in debug mode.                          -->
@@ -45,8 +51,8 @@
             <label class="form-label" for="zip">Postcode</label>
             <input class="form-text" id="zip" maxlength="20" name="zip" size="20" type="text">
             <br>
-            <label class="form-label" for="00N1e00000jthUx">Enquiry relating to:</label>
-            <select class="form-select cv-dropdown" id="00N1e00000jthUx" name="00N1e00000jthUx" title="Enquiry relating to">
+            <label class="form-label" for="00N5j00000UMtoX">Enquiry relating to:</label>
+            <select class="form-select cv-dropdown" id="00N5j00000UMtoX" name="00N5j00000UMtoX" title="Enquiry relating to">
                 <option value="">--None--</option>
                 <option value="Existing Order">Existing Order</option>
                 <option value="Product Information">Product Information</option>
@@ -57,9 +63,11 @@
             <input type="hidden" id="lead_source" name="lead_source" value="Website Contact Us Form">
             <br>
             <label class="form-label" for="description">Description</label>
-            <textarea class="form-textarea" name="description"></textarea>
+            <textarea class="form-textarea" id="description" name="description"></textarea>
             <br>
-            <input type="hidden" id="recordType" name="recordType" value="0121e000001IjP8">
+            <input type="hidden" id="recordType" name="recordType" value="0125j00000227VC">
+            <br>
+            <div class="g-recaptcha" data-sitekey="6LcjMk4pAAAAAFFLipV0id0BATBAHxduInxulaZN"></div>
             <br>
             <button type="submit" class="btn cv-send" name="submit">Submit</button>
         </form>
